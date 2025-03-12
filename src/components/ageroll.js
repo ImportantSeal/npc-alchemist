@@ -5,7 +5,7 @@ const AgeRoller = () =>{
 
 
     const rollAge = () =>{
-        const randomAge = Math.floor(Math.random()* (99-16+1))+16;
+        const randomAge = Math.floor(Math.random()* (99-14+1))+14;
         setSelectedAge (`${randomAge}`);
     };
 
