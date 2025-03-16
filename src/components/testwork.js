@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React, {useState, forwardRef, useImperativeHandle} from "react";
 import occupation from '../data/occupation';
 
-const Workroller = () =>{
+const Workroller = forwardRef((props, ref) =>{
 
     const [selectedJob, setSelectedJob] = useState('')
 
@@ -13,6 +13,10 @@ const Workroller = () =>{
         setSelectedJob(`${randomJob} (${randomClass})`);
     };
 
+    useImperativeHandle(ref, ()=>({
+        rollJob
+    }));
+
     return (
         <div>
             <h3>Occupation Roller</h3>
@@ -20,6 +24,6 @@ const Workroller = () =>{
             {selectedJob && <p>{selectedJob}</p>}
         </div>
     );
-};
+});
 
 export default Workroller;

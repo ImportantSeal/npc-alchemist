@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React, {useState, useImperativeHandle, forwardRef} from "react";
 import names from '../data/names';
 
-const FirstNameRoller = () =>{
+const FirstNameRoller = forwardRef((props, ref) =>{
 
     const [selectedName, setSelectedName] = useState('')
 
@@ -13,6 +13,10 @@ const FirstNameRoller = () =>{
         setSelectedName(`${randomName} (${randomRace})`);
     };
 
+    useImperativeHandle(ref, ()=>({
+        rollName
+    }));
+
     return (
         <div>
             <h3>First Name Roller</h3>
@@ -20,6 +24,6 @@ const FirstNameRoller = () =>{
             {selectedName && <p>{selectedName}</p>}
         </div>
     );
-};
+});
 
 export default FirstNameRoller;
