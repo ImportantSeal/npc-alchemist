@@ -15,7 +15,7 @@ const Workroller = () =>{
 
     return (
         <div>
-            <h1>Occupation Roller</h1>
+            <h3>Occupation Roller</h3>
             <button onClick = {rollJob}>Roll Job</button>
             {selectedJob && <p>{selectedJob}</p>}
         </div>

@@ -15,7 +15,7 @@ const FirstNameRoller = () =>{
 
     return (
         <div>
-            <h1>First Name Roller</h1>
+            <h3>First Name Roller</h3>
             <button onClick = {rollName}>Roll Name</button>
             {selectedName && <p>{selectedName}</p>}
         </div>
