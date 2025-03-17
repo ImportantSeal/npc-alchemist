@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React, {useRef, useEffect} from "react";
 
 import FirstNameRoller from './testroll';
 import Workroller from './testwork';
@@ -14,6 +14,10 @@ const rollAll = () =>{
     if (workRef.current) workRef.current.rollJob();
     if (firstNameRef.current) firstNameRef.current.rollName();
 };
+
+useEffect(()=>{
+    rollAll();
+}, []);
 
 return(
     <div>
