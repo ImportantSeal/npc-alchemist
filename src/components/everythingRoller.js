@@ -1,8 +1,8 @@
 import React, {useRef, useEffect} from "react";
 
-import FirstNameRoller from './testroll';
-import Workroller from './testwork';
-import AgeRoller from './ageroll';
+import FirstNameRoller from './firstNameRoller';
+import JobRoller from './jobRoller';
+import AgeRoller from './ageRoller';
 
 const RollEverything =()=>{
     const ageRef= useRef(null);
@@ -24,7 +24,7 @@ return(
         <h1>Roll Everything</h1>
         <button onClick={rollAll}>Roll all</button>
         <AgeRoller ref={ageRef}/>
-        <Workroller ref={workRef}/>
+        <JobRoller ref={workRef}/>
         <FirstNameRoller ref={firstNameRef}/>
     </div>
 );

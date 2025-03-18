@@ -19,7 +19,7 @@ const Workroller = forwardRef((props, ref) =>{
 
     return (
         <div>
-            <h3>Occupation Roller</h3>
+            <h3>Occupation</h3>
             <button onClick = {rollJob}>Roll Job</button>
             {selectedJob && <p>{selectedJob}</p>}
         </div>

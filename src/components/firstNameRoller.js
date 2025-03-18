@@ -19,7 +19,7 @@ const FirstNameRoller = forwardRef((props, ref) =>{
 
     return (
         <div>
-            <h3>First Name Roller</h3>
+            <h3>First Name</h3>
             <button onClick = {rollName}>Roll Name</button>
             {selectedName && <p>{selectedName}</p>}
         </div>
